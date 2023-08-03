@@ -8,6 +8,7 @@
     <OutputType>Library</OutputType>
     <PackageProjectUrl>https://github.com/dadotnetkid/AutoApi</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/dadotnetkid/AutoApi</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
