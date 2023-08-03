@@ -1,5 +1,5 @@
 [![Nuget](https://github.com/dadotnetkid/AutoApi/actions/workflows/main.yml/badge.svg)](https://github.com/dadotnetkid/AutoApi/actions/workflows/main.yml)
-[![NuGet Download](https://img.shields.io/nuget/dt/Developworx.AutoApi.Core.svg?style=flat-square)](https://www.nuget.org/packages/Developworx.AutoApi.Core 
+[![NuGet Download](https://img.shields.io/nuget/dt/Developworx.AutoApi.Core.svg?style=flat-square)](https://www.nuget.org/packages/Developworx.AutoApi.Core)
 # AutoApi
 `Auto Api is where you dont need to create controller. 
 It transform the services into Api Endpoint
