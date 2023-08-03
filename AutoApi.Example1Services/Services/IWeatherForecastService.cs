@@ -5,7 +5,7 @@ namespace Developworx.AutoApi.Example1Services.Services;
 
 public interface IWeatherForecastService : IApplicationService
 {
-    string Get();
+    IEnumerable<WeatherForecast> Get();
     string Post(WeatherForecast model);
     string Modify(WeatherForecast model);
 }
