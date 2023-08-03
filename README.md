@@ -17,7 +17,7 @@ It transform the services into Api Endpoint
 
 #### Implementation
 ```c#
- using AutoApi.Core.Services;
+using AutoApi.Core.Services;
 using AutoApi.Example1Services.Models;
 using Microsoft.AspNetCore.Mvc;
 
