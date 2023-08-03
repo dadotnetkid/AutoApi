@@ -62,4 +62,5 @@ public interface IWeatherForecastService : IApplicationService
 }
 
 ```
+![image](https://github.com/dadotnetkid/AutoApi/assets/13300183/d6904057-c2f4-4045-a89e-f1e69f34c7e3)
 
