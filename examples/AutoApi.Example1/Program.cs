@@ -1,4 +1,4 @@
-using AutoApi.Core.Extensions;
+using Developworx.AutoApi.Core.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 

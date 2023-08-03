@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9045B12F-EDF
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "examples", "examples", "{0DA16D69-1FD4-461B-A6BF-2CC2BD494F01}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoApi.Core", "src\AutoApi.Core\AutoApi.Core.csproj", "{9A87892A-A297-427B-B605-847EFED2C12A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Developworx.AutoApi.Core", "src\AutoApi.Core\Developworx.AutoApi.Core.csproj", "{9A87892A-A297-427B-B605-847EFED2C12A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoApi.Example1", "examples\AutoApi.Example1\AutoApi.Example1.csproj", "{17D87E14-4E99-48F7-97B1-C3E7E01398C7}"
 EndProject

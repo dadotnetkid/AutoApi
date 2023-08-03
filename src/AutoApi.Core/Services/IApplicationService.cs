@@ -1,4 +1,4 @@
-﻿namespace AutoApi.Core.Services
+﻿namespace Developworx.AutoApi.Core.Services
 {
     public interface IApplicationService
     {

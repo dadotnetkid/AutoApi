@@ -4,12 +4,12 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using AutoApi.Core.Services;
+using Developworx.AutoApi.Core.Services;
 using Microsoft.AspNetCore.Mvc.ApplicationParts;
 using Microsoft.AspNetCore.Mvc.Controllers;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace AutoApi.Core.Extensions
+namespace Developworx.AutoApi.Core.Extensions
 {
     public static class AutoRegisterServicesExtension
     {

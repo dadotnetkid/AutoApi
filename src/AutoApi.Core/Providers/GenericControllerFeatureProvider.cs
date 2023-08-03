@@ -1,9 +1,9 @@
 ﻿using System.Reflection;
-using AutoApi.Core.Services;
+using Developworx.AutoApi.Core.Services;
 using Microsoft.AspNetCore.Mvc.ApplicationParts;
 using Microsoft.AspNetCore.Mvc.Controllers;
 
-namespace AutoApi.Core.Providers
+namespace Developworx.AutoApi.Core.Providers
 {
     public class GenericControllerFeatureProvider : IApplicationFeatureProvider<ControllerFeature>
     {
@@ -14,7 +14,7 @@ namespace AutoApi.Core.Providers
                 .Where(c => ((AssemblyPart)c).Types.Any(t => t.BaseType == typeof(ApplicationService)))
                 .SelectMany(c => ((AssemblyPart)c).Types)
                 .Where(c => c.BaseType == typeof(ApplicationService));
-           
+
             foreach (var i in types)
             {
                 feature.Controllers.Add(i.GetTypeInfo());

@@ -1,5 +1,4 @@
-﻿using AutoApi.Core.Services;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using System.Reflection;
 using System.Reflection.Emit;
@@ -8,8 +7,9 @@ using System.Security.Cryptography.X509Certificates;
 using Microsoft.AspNetCore.Mvc.ActionConstraints;
 using System.Reflection.Metadata;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Developworx.AutoApi.Core.Services;
 
-namespace AutoApi.Core.Attributes
+namespace Developworx.AutoApi.Core.Attributes
 {
     public class GenericControllerNameConvention : IControllerModelConvention
     {

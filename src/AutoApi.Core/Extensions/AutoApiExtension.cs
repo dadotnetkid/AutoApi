@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using AutoApi.Core.Attributes;
-using AutoApi.Core.Providers;
+using Developworx.AutoApi.Core.Attributes;
+using Developworx.AutoApi.Core.Providers;
 using Microsoft.AspNetCore.Mvc.ApplicationParts;
 using Microsoft.AspNetCore.Mvc.Controllers;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace AutoApi.Core.Extensions
+namespace Developworx.AutoApi.Core.Extensions
 {
     public static class AutoApiExtension
     {

@@ -17,7 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\AutoApi.Example1Services\AutoApi.Example1Services.csproj" />
-    <ProjectReference Include="..\..\src\AutoApi.Core\AutoApi.Core.csproj" />
+    <ProjectReference Include="..\..\src\AutoApi.Core\Developworx.AutoApi.Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>

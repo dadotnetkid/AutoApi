@@ -1,9 +1,7 @@
-﻿using AutoApi.Core.Attributes;
-using Microsoft.AspNetCore.Mvc;
+﻿
+namespace Developworx.AutoApi.Core.Services;
 
-namespace AutoApi.Core.Services;
-
-public class ApplicationService :  IApplicationService
+public class ApplicationService : IApplicationService
 {
 
 }

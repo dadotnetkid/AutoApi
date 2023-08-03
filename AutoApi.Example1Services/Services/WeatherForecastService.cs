@@ -1,5 +1,5 @@
-﻿using AutoApi.Core.Services;
-using AutoApi.Example1Services.Models;
+﻿using AutoApi.Example1Services.Models;
+using Developworx.AutoApi.Core.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AutoApi.Example1Services.Services
