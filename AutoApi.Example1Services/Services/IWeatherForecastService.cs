@@ -1,7 +1,7 @@
-﻿using AutoApi.Example1Services.Models;
-using Developworx.AutoApi.Core.Services;
+﻿using Developworx.AutoApi.Core.Services;
+using Developworx.AutoApi.Example1Services.Models;
 
-namespace AutoApi.Example1Services.Services;
+namespace Developworx.AutoApi.Example1Services.Services;
 
 public interface IWeatherForecastService : IApplicationService
 {

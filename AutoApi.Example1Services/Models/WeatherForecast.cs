@@ -1,4 +1,4 @@
-namespace AutoApi.Example1Services.Models
+namespace Developworx.AutoApi.Example1Services.Models
 {
     public class WeatherForecast
     {

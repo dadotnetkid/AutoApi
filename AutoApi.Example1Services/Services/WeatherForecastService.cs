@@ -1,8 +1,8 @@
-﻿using AutoApi.Example1Services.Models;
-using Developworx.AutoApi.Core.Services;
+﻿using Developworx.AutoApi.Core.Services;
+using Developworx.AutoApi.Example1Services.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace AutoApi.Example1Services.Services
+namespace Developworx.AutoApi.Example1Services.Services
 {
     public class WeatherForecastService : ApplicationService, IWeatherForecastService
     {
