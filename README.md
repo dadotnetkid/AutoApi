@@ -1,3 +1,4 @@
+[![Nuget](https://github.com/dadotnetkid/AutoApi/actions/workflows/main.yml/badge.svg)](https://github.com/dadotnetkid/AutoApi/actions/workflows/main.yml)
 # AutoApi
 `Auto Api is where you dont need to create controller. 
 It transform the services into Api Endpoint
