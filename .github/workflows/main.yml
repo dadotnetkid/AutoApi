@@ -21,4 +21,4 @@ jobs:
       run: dotnet pack  -c Release --no-build /p:Version=${{github.ref_name}} --output . 
       working-directory: /home/runner/work/AutoApi/AutoApi/src/AutoApi.Core
     - name: Push to NuGet
-      run: dotnet nuget push "/home/runner/work/AutoApi/AutoApi/src/AutoApi.Core/AutoApi.Core.${{github.ref_name}}.nupkg" --api-key ${{secrets.nuget_api_key}} --source https://api.nuget.org/v3/index.json
+      run: dotnet nuget push "/home/runner/work/AutoApi/AutoApi/src/AutoApi.Core/Developworx.AutoApi.Core.${{github.ref_name}}.nupkg" --api-key ${{secrets.nuget_api_key}} --source https://api.nuget.org/v3/index.json
