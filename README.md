@@ -19,9 +19,8 @@ It transform the services into Api Endpoint
 
 #### Implementation
 ```c#
-using AutoApi.Core.Services;
-using AutoApi.Example1Services.Models;
-using Microsoft.AspNetCore.Mvc;
+using Developworx.AutoApi.Core.Services;
+using Developworx.AutoApi.Example1Services.Models;
 
 namespace AutoApi.Example1Services.Services
 {
@@ -51,8 +50,8 @@ namespace AutoApi.Example1Services.Services
 
 #### Interface
 ```c#
-using AutoApi.Core.Services;
-using AutoApi.Example1Services.Models;
+using Developworx.AutoApi.Core.Services;
+using Developworx.AutoApi.Example1Services.Models;
 
 namespace AutoApi.Example1Services.Services;
 
