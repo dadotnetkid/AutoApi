@@ -4,6 +4,7 @@
 `Auto Api is where you dont need to create controller. 
 It transform the services into Api Endpoint
 `
+
 > ## 1.0.1
 > 
 > - Added support for IFormFile and IFormCollection
