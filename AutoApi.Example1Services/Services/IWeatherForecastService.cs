@@ -1,11 +1,11 @@
 ﻿using Developworx.AutoApi.Core.Services;
 using Developworx.AutoApi.Example1Services.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace Developworx.AutoApi.Example1Services.Services;
 
 public interface IWeatherForecastService : IApplicationService
 {
-    IEnumerable<WeatherForecast> Get();
-    string Post(WeatherForecast model);
-    string Modify(WeatherForecast model);
+  
+    string UploadFile1(IFormFile file);
 }

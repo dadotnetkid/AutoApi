@@ -1,11 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using System.Reflection;
-using System.Reflection.Emit;
-using System.Reflection.Metadata.Ecma335;
-using System.Security.Cryptography.X509Certificates;
 using Microsoft.AspNetCore.Mvc.ActionConstraints;
-using System.Reflection.Metadata;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Developworx.AutoApi.Core.Services;
 
@@ -36,13 +32,17 @@ namespace Developworx.AutoApi.Core.Attributes
                     model.Selectors.Add(new SelectorModel()
                     {
                         ActionConstraints =
+                               {
+                                   new HttpMethodActionConstraint(new []{GetHttpMethod(i)})
+                               },
+                        AttributeRouteModel = new AttributeRouteModel()
                         {
-                            new HttpMethodActionConstraint(new []{GetHttpMethod(i)})
+                            Template = i.Name
                         },
                         EndpointMetadata =
-                        {
-                            obj,
-                        }
+                               {
+                                   obj,
+                               }
                     });
                     controller.Actions.Add(model);
                 }
@@ -79,23 +79,39 @@ namespace Developworx.AutoApi.Core.Attributes
             {
                 attributes.Add(new FromBodyAttribute()
                 {
+
                 });
             }
+
+
             var model = new ParameterModel(parameter, attributes)
             {
                 ParameterName = parameter.Name,
                 Action = new ActionModel(method, new[] { GetHttpAttribute(method) }),
+                ParameterInfo =
+                {
+
+                },
                 BindingInfo = new BindingInfo()
                 {
-                    BindingSource = new BindingSource("Body", "Body", true, true)
-                }
+                    BindingSource = GetBindingSource(parameter, method)
+                },
+
             };
+
             return model;
+        }
+
+        private BindingSource GetBindingSource(ParameterInfo parameter, MethodInfo method)
+        {
+            if (parameter.ParameterType == typeof(IFormFile) || parameter.ParameterType == typeof(IFormFileCollection))
+                return BindingSource.FormFile;
+            return BindingSource.Body;
         }
 
         private IReadOnlyList<object> GetHttpAttribute(MethodInfo methodInfo)
         {
-            var attribute = new List<object> { new HttpGetAttribute($"/{methodInfo.Name}")
+            var attribute = new List<object> { new HttpGetAttribute($"{methodInfo.Name}")
                 {
                     Name= methodInfo.Name,
                 }
@@ -104,7 +120,7 @@ namespace Developworx.AutoApi.Core.Attributes
             {
                 attribute = new List<object>
                 {
-                    new HttpGetAttribute($"/{methodInfo.Name}")
+                    new HttpGetAttribute($"{methodInfo.Name}")
                     {
                         Name = methodInfo.Name,
                     }
@@ -112,27 +128,31 @@ namespace Developworx.AutoApi.Core.Attributes
             }
             if (Post.Any(c => methodInfo.Name.Contains(c, StringComparison.CurrentCultureIgnoreCase)))
             {
-                attribute = new List<object> { new HttpPostAttribute($"/{methodInfo.Name}")
-                {
-                    Name= methodInfo.Name,
-                }  };
+                attribute = new List<object> {
+                        new HttpPostAttribute($"{methodInfo.Name}")
+                            {
+                                Name= methodInfo.Name,
+
+                            }
+                };
             }
             if (Delete.Any(c => methodInfo.Name.Contains(c, StringComparison.CurrentCultureIgnoreCase)))
             {
-                attribute = new List<object> { new HttpDeleteAttribute($"/{methodInfo.Name}")
+                attribute = new List<object> { new HttpDeleteAttribute($"{methodInfo.Name}")
                 {
                     Name= methodInfo.Name,
                 }  };
             }
             if (Put.Any(c => methodInfo.Name.Contains(c, StringComparison.CurrentCultureIgnoreCase)))
             {
-                attribute = new List<object> { new HttpPutAttribute($"/{methodInfo.Name}")
+                attribute = new List<object> { new HttpPutAttribute($"{methodInfo.Name}")
                 {
                     Name= methodInfo.Name,
                 }  };
             }
             return attribute;
         }
+
         private string GetHttpMethod(MethodInfo methodInfo)
         {
             var attribute = "GET";
@@ -154,6 +174,6 @@ namespace Developworx.AutoApi.Core.Attributes
 
         private List<string> Put => new() { "patch", "update", "put", "edit", "modify" };
         private List<string> Delete => new() { "delete", "remove" };
-        private List<string> Post => new() { "insert", "post", "add", "new" };
+        private List<string> Post => new() { "insert", "post", "add", "new", "upload" };
     }
 }
